@@ -2,7 +2,7 @@
   "appname": "Sansaire",
   "clientid": "68C67BA2-7F81-4041-B295-B26F673043F9",
   "buyerid": "sansaire",
-  "anonymous": false,
+  "anonymous": true,
   "catalogid": "sansaire",
   "environment": "prod",
   "defaultstate": "home",
