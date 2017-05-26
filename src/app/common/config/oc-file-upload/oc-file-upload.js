@@ -5,9 +5,9 @@ angular.module('orderCloud')
         var awsregion = $injector.has('awsregion') ? $injector.get('awsregion') : null;
         var awsbucket = $injector.has('awsbucket') ? $injector.get('awsbucket') : null;
 
-        $provide.value('awsaccesskeyid', awsaccesskeyid || 'XXXXXXXXXXXXXXXXXXXX');
-        $provide.value('awssecretaccesskey', awssecretaccesskey || 'XXXXXXXXXXXXXXXXX+XXXXXXXXXXXXXXXXXXXXXX');
-        $provide.value('awsregion', awsregion || 'XX-XXXX-X');
-        $provide.value('awsbucket', awsbucket || 'XXXX');
+        $provide.value('awsaccesskeyid', awsaccesskeyid || 'AKIAJDDM5ZWWOIH4AZZQ');
+        $provide.value('awssecretaccesskey', awssecretaccesskey || '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');
+        $provide.value('awsregion', awsregion || 'us-west-2');
+        $provide.value('awsbucket', awsbucket || 'marketplace-application-test');
     })
 ;

@@ -4,7 +4,6 @@
 </header>-->
 <!--Navmenu is used on smaller viewports-->
 <nav class="navmenu navmenu-default navmenu-fixed-left offcanvas c-mobile-nav">
-    <a class="navmenu-brand" ui-sref="home">{{application.name()}}</a>
     <ul class="nav navmenu-nav">
         <li>
             <a ui-sref="productBrowse.products({page:'', favorites:'', sortBy:'', categoryid:''})">Product Browse</a>
@@ -54,9 +53,8 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" ui-sref="home" ng-if="!application.logoUrl">{{application.name()}}</a>
-                <a class="c-logo-display c-logo-display__nav" ng-if="application.logoUrl" ui-sref="home">
-                    <img ng-src="{{application.logoUrl}}" alt="{{application.name()}}">
+                <a class="navbar-brand" ui-sref="home">
+                    <oc-brand logo-url="'https://sansaire.com/wp-content/themes/sansaire_2/includes/images/sansaire-logo.png'"></oc-brand>
                 </a>
             </div>
             <ul class="nav navbar-nav c-desktop-nav">
@@ -113,4 +111,4 @@
         </div>
     </nav>
 </header>
-<main ui-view class="container" cg-busy="application.stateLoading('base')"></main>
+<main ui-view ng-class='{"container container-smooth": !application.$state.is("home")}' style="margin:0 auto;" cg-busy="application.stateLoading('base')"></main>

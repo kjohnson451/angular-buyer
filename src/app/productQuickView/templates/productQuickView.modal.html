@@ -1,7 +1,7 @@
 <form name="OCProductForm" ng-submit="productQuickView.addToCart()" autocomplete="off" novalidate oc-pretty-submit>
 	<div class="modal-header">
 		<button type="button" class="close" ng-click="productQuickView.cancel()" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-		<h1>{{productQuickView.item.Name || productQuickView.item.ID}} <small ng-if="productQuickView.item.Name">{{productQuickView.item.ID}}</small></h1>
+		<h1>{{productQuickView.item.Name || productQuickView.item.ID}}</h1>
 	</div>
 	<div class="modal-body">
 		<div class="row">
@@ -44,9 +44,9 @@
 				<fieldset class="form-group" ng-if="productQuickView.item.PriceSchedule">
 					<oc-quantity-input product="productQuickView.item" label="Quantity"></oc-quantity-input>
 				</fieldset>
-				<div class="alert alert-danger" ng-if="!productQuickView.item.PriceSchedule">
-                You are not able to order this product.
-            </div>
+				<div class="alert alert-info" ng-if="!productQuickView.item.PriceSchedule">
+					You are not able to order this product.
+				</div>
 			</div>
 		</div>
 	</div>
